@@ -43,14 +43,14 @@ class UserService {
 
         user = await userRepository.Create(user, role, userInfo);
 
-        let mail = {
+        /*let mail = {
             to: userInfo.email,
             subject: "Welcome to Cleaning",
             text: "Thank you for registering at the Cleaning",
             html: "<b>You are welcome!</b>",
         };
 
-        await Mailer(JSON.stringify(mail));
+        await Mailer(JSON.stringify(mail));*/
 
         return user;
     }

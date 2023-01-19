@@ -1,7 +1,4 @@
-DROP DATABASE IF EXISTS cleaning;
 
-CREATE DATABASE cleaning;
-USE cleaning;
 
 CREATE TABLE users (
     id serial NOT NULL,
@@ -16,6 +13,9 @@ CREATE TABLE user_infos (
     first_name character varying(30) COLLATE pg_catalog."default" NOT NULL,
     email character varying(50) COLLATE pg_catalog."default" NOT NULL,
     phone character varying(30) COLLATE pg_catalog."default",
+	createdAt date NULL,
+    updatedAt date NULL,
+    userId serial NOT NULL,
 	CONSTRAINT user_infos_pkey PRIMARY KEY (id),
     CONSTRAINT user_infos_email_key UNIQUE (email)
 );

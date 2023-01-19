@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS cleaning;
+
+CREATE DATABASE cleaning;
