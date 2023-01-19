@@ -13,9 +13,9 @@ CREATE TABLE user_infos (
     first_name character varying(30) COLLATE pg_catalog."default" NOT NULL,
     email character varying(50) COLLATE pg_catalog."default" NOT NULL,
     phone character varying(30) COLLATE pg_catalog."default",
-	createdAt date NULL,
-    updatedAt date NULL,
-    userId serial NOT NULL,
+	"createdAt" date NULL,
+    "updatedAt" date NULL,
+    "userId" serial NOT NULL,
 	CONSTRAINT user_infos_pkey PRIMARY KEY (id),
     CONSTRAINT user_infos_email_key UNIQUE (email)
 );
@@ -44,7 +44,7 @@ CREATE TABLE reviews (
     CONSTRAINT reviews_pkey PRIMARY KEY (id)
 );
 
-CREATE TABLE Services (
+CREATE TABLE "Services" (
     id serial NOT NULL,
     name character varying(255) COLLATE pg_catalog."default" NOT NULL,
     price double precision NOT NULL,
@@ -54,13 +54,13 @@ CREATE TABLE Services (
     CONSTRAINT "Services_name_key" UNIQUE (name)
 );
 
-CREATE TABLE Rooms (
+CREATE TABLE "Rooms" (
      id serial NOT NULL,
     name character varying(256) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT "Rooms_pkey" PRIMARY KEY (id)
 );
 
-CREATE TABLE Orders (
+CREATE TABLE "Orders" (
     id serial NOT NULL,
     address character varying(1000) COLLATE pg_catalog."default" NOT NULL,
     price double precision NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE Orders (
     CONSTRAINT "Orders_pkey" PRIMARY KEY (id)
 );
 
-CREATE TABLE Baskets (
+CREATE TABLE "Baskets" (
     id serial NOT NULL,
     quantity integer,
     price double precision NOT NULL,
