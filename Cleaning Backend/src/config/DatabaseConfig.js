@@ -1,7 +1,7 @@
 const {Sequelize} = require('sequelize');
 const MongoLogger = require('./../utils/MongoLogger');
 
-const sequelize = new Sequelize("Cleaning", "postgres", "'", {
+const sequelize = new Sequelize("cleaning", "postgres", "'", {
     host: "localhost",
     port: "5432",
     dialect: "postgres",
